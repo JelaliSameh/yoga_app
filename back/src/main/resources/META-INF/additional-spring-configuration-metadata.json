@@ -1,0 +1,37 @@
+{"properties": [
+  {
+    "name": "oc.app.jwtExpirationMs",
+    "type": "java.lang.String",
+    "description": "A description for 'oc.app.jwtExpirationMs'"
+  },
+  {
+    "name": "oc.app.jwtSecret",
+    "type": "java.lang.String",
+    "description": "A description for 'oc.app.jwtSecret'"
+  },
+  {
+    "name": "oc.app.jwtSecret",
+    "type": "java.lang.String",
+    "description": "A description for 'oc.app.jwtSecret'"
+  },
+  {
+    "name": "oc.app.jwtExpirationMs",
+    "type": "java.lang.String",
+    "description": "A description for 'oc.app.jwtExpirationMs'"
+  },
+  {
+    "name": "jwtSecret",
+    "type": "java.lang.String",
+    "description": "A description for 'jwtSecret'"
+  },
+  {
+    "name": "jwt.Secretkey",
+    "type": "java.lang.String",
+    "description": "A description for 'jwt.Secretkey'"
+  },
+  {
+    "name": "oc.app.jwtExpirationMs",
+    "type": "java.lang.String",
+    "description": "A description for 'oc.app.jwtExpirationMs'"
+  }
+]}
