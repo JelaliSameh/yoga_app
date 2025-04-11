@@ -9,13 +9,13 @@ describe('me component', () => {
         cy.intercept('GET', '/api/session', {
             body:[ {
               id: 2,
-              name: "DiD Admin",
+              name: "Sam Admin",
               date: "2024-04-06T00:00:00.000+00:00",
               teacher_id: 2,
               description: "session yoga v2 v3",
               users: [1,3,5,6],
-              createdAt: "2024-04-05T15:25:49",
-              updatedAt: "2024-04-10T14:52:03"
+              createdAt: "2025-04-05T15:25:49",
+              updatedAt: "2025-04-10T14:52:03"
             }],
             }).as('sessions')
     
@@ -46,7 +46,7 @@ describe('me component', () => {
         body: {
         id: 2,
         username: 'userName',
-        firstName: 'DiD',
+        firstName: 'Sam',
         lastName: 'Admin',
         email: 'user@email.com',
         createdAt: '2021-09-01T00:00:00.000Z',
@@ -67,7 +67,7 @@ describe('me component', () => {
       cy.url().should('include', '/me')
   
       // Check that the user information is displayed
-      cy.contains('DiD')
+      cy.contains('Sam')
       cy.contains('ADMIN')
       cy.contains('email')
     })

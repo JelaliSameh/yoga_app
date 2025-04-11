@@ -4,6 +4,9 @@ import { SessionService } from "../services/session.service";
 
 @Injectable({providedIn: 'root'})
 export class AuthGuard implements CanActivate {
+  static canActivate() {
+    throw new Error('Method not implemented.');
+  }
 
   constructor( 
     private router: Router,

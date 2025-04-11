@@ -18,7 +18,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
-@AutoConfigureMockMvc
+@AutoConfigureMockMvc //Configure MockMvc pour tester les API REST.
 public class AuthControllerIntegrationTest {
 
     @Autowired
@@ -33,7 +33,7 @@ public class AuthControllerIntegrationTest {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    @BeforeEach
+    @BeforeEach //Exécuté avant chaque test.
     public void setUp() {
         userRepository.deleteAll();
         User user = new User();
@@ -48,9 +48,9 @@ public class AuthControllerIntegrationTest {
         loginRequest.setEmail("test@example.com");
         loginRequest.setPassword("password");
 
-        mockMvc.perform(post("/api/auth/login")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(loginRequest)))
-                .andExpect(status().isOk());
+        mockMvc.perform(post("/api/auth/login")//Simule une requête HTTP.
+                .contentType(MediaType.APPLICATION_JSON)//Définit le format JSON.
+                .content(objectMapper.writeValueAsString(loginRequest)))//Convertit un objet Java en JSON.
+                .andExpect(status().isOk());//Vérifie que la réponse est 200 OK.
     }
 }

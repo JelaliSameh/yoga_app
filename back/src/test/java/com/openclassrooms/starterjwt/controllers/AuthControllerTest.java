@@ -91,7 +91,7 @@ public class AuthControllerTest {
         ResponseEntity<?> response = authController.registerUser(signupRequest);
 
         // Vérifier que la méthode save a été appelée
-        verify(userRepository, times(1)).save(any(User.class));
+        verify(userRepository, times(1)).save(any(User.class));//
 
         // Vérifier que le résultat est correct
         assertTrue(response.getBody() instanceof MessageResponse);

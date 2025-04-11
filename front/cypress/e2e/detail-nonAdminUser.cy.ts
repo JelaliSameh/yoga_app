@@ -17,11 +17,11 @@ describe('detail session for admin user', () => {
             body: {
             id: 1,
             username: 'userName',
-            firstName: 'Toto',
+            firstName: 'Coco',
             lastName: 'Non-Admin',
-            email: 'usertoto@email.com',
-            createdAt: '2021-09-01T00:00:00.000Z',
-            updatedAt: '2021-09-01T00:00:00.000Z',
+            email: 'userCoco@email.com',
+            createdAt: '2024-09-01T00:00:00.000Z',
+            updatedAt: '2024-09-01T00:00:00.000Z',
             admin: false
             },
             }).as('user')
@@ -30,26 +30,26 @@ describe('detail session for admin user', () => {
         cy.intercept('GET', '/api/session', {
             body:[ {
               id: 2,
-              name: "Toto Non-Admin",
+              name: "Coco Non-Admin",
               date: "2024-04-06T00:00:00.000+00:00",
               teacher_id: 2,
               description: "session yoga v2 v3",
               users: [1,3,5,6],
-              createdAt: "2024-04-05T15:25:49",
-              updatedAt: "2024-04-10T14:52:03"
+              createdAt: "2025-04-05T15:25:49",
+              updatedAt: "2025-04-10T14:52:03"
             }],
             }).as('sessions')
 
             cy.intercept('GET', '/api/session/2', {
                 body:{
                     id: 2,
-                    name: "Toto Non-Admin",
-                    date: "2024-04-06T00:00:00.000+00:00",
+                    name: "Coco Non-Admin",
+                    date: "2025-04-06T00:00:00.000+00:00",
                     teacher_id: 2,
                     description: "session yoga v2 v3",
                     users: [1,3,5,6],
-                    createdAt: "2024-04-05T15:25:49",
-                    updatedAt: "2024-04-10T14:52:03"
+                    createdAt: "2025-04-05T15:25:49",
+                    updatedAt: "2025-04-10T14:52:03"
                   },
                   }).as('session') 
 
@@ -57,9 +57,9 @@ describe('detail session for admin user', () => {
                 body:{
                     id: 2,
                     lastName: "Admin",
-                    firstName: "DiD",
-                    createdAt: "2024-04-05T15:25:49",
-                    updatedAt: "2024-04-10T14:52:03"
+                    firstName: "Sam",
+                    createdAt: "2025-04-05T15:25:49",
+                    updatedAt: "2025-04-10T14:52:03"
                 },
                 }).as('teacher') 
     
@@ -85,13 +85,13 @@ describe('detail session for admin user', () => {
         cy.intercept('GET', '/api/session', {
             body:[ {
               id: 2,
-              name: "Toto Non-Admin",
-              date: "2024-04-06T00:00:00.000+00:00",
+              name: "Coco Non-Admin",
+              date: "2025-04-06T00:00:00.000+00:00",
               teacher_id: 2,
               description: "session yoga v2 v3",
               users: [1,3,5,6],
-              createdAt: "2024-04-05T15:25:49",
-              updatedAt: "2024-04-10T14:52:03"
+              createdAt: "2025-04-05T15:25:49",
+              updatedAt: "2025-04-10T14:52:03"
             }],
             }).as('sessions')
 
@@ -99,12 +99,12 @@ describe('detail session for admin user', () => {
                 body:{
                     id: 2,
                     name: "Toto Non-Admin",
-                    date: "2024-04-06T00:00:00.000+00:00",
+                    date: "2025-04-06T00:00:00.000+00:00",
                     teacher_id: 2,
                     description: "session yoga v2 v3",
                     users: [1,3,5,6],
-                    createdAt: "2024-04-05T15:25:49",
-                    updatedAt: "2024-04-10T14:52:03"
+                    createdAt: "2025-04-05T15:25:49",
+                    updatedAt: "2025-04-10T14:52:03"
                   },
             }).as('session') 
 
@@ -112,13 +112,13 @@ describe('detail session for admin user', () => {
             statusCode: 200,
             body: {
                 id: 2,
-                name: "Toto Non-Admin",
-                date: "2024-04-06T00:00:00.000+00:00",
+                name: "Coco Non-Admin",
+                date: "2025-04-06T00:00:00.000+00:00",
                 teacher_id: 2,
                 description: "session yoga v2 v3",
                 users: [3,5,6],
-                createdAt: "2024-04-05T15:25:49",
-                updatedAt: "2024-04-10T14:52:03"
+                createdAt: "2025-04-05T15:25:49",
+                updatedAt: "2025-04-10T14:52:03"
             }
         }).as('unregister')
 
@@ -132,39 +132,39 @@ describe('detail session for admin user', () => {
         cy.intercept('GET', '/api/session', {
             body:[ {
               id: 2,
-              name: "Toto Non-Admin",
-              date: "2024-04-06T00:00:00.000+00:00",
+              name: "Coco Non-Admin",
+              date: "2025-04-06T00:00:00.000+00:00",
               teacher_id: 2,
               description: "session yoga v2 v3",
               users: [3,5,6],
-              createdAt: "2024-04-05T15:25:49",
-              updatedAt: "2024-04-10T14:52:03"
+              createdAt: "2025-04-05T15:25:49",
+              updatedAt: "2025-04-10T14:52:03"
             }],
             }).as('sessions')
 
             cy.intercept('GET', '/api/session/2', {
                 body:{
                     id: 2,
-                    name: "Toto Non-Admin",
-                    date: "2024-04-06T00:00:00.000+00:00",
+                    name: "Coco Non-Admin",
+                    date: "2025-04-06T00:00:00.000+00:00",
                     teacher_id: 2,
                     description: "session yoga v2 v3",
                     users: [3,5,6],
-                    createdAt: "2024-04-05T15:25:49",
-                    updatedAt: "2024-04-10T14:52:03"
+                    createdAt: "2025-04-05T15:25:49",
+                    updatedAt: "2025-04-10T14:52:03"
                   },
                   }).as('session') 
         cy.intercept('POST', '/api/session/2/participate/1', {
             statusCode: 200,
             body: {
                 id: 2,
-                name: "Toto Non-Admin",
-                date: "2024-04-06T00:00:00.000+00:00",
+                name: "Coco Non-Admin",
+                date: "2025-04-06T00:00:00.000+00:00",
                 teacher_id: 2,
                 description: "session yoga v2 v3",
                 users: [1,3,5,6],
-                createdAt: "2024-04-05T15:25:49",
-                updatedAt: "2024-04-10T14:52:03"
+                createdAt: "2025-04-05T15:25:49",
+                updatedAt: "2025-04-10T14:52:03"
             }
         }).as('register')
 

@@ -8,9 +8,9 @@ describe('register test', () => {
     cy.contains('Register').click()
     cy.intercept('POST', '/api/auth/register', {
       body: {
-        lastName: "toto",
-        firstName: "toto",
-        email: "toto3@toto.com",
+        lastName: "Coco",
+        firstName: "Coco",
+        email: "Coco3@coco.com",
         password: "test!1234"
       },
     })
@@ -28,9 +28,9 @@ describe('register test', () => {
     cy.intercept('POST', '/api/auth/register', {
       statusCode: 400,
       body: {
-        lastName: "toto",
-        firstName: "toto",
-        email: "toto3@toto.com",
+        lastName: "Coco",
+        firstName: "Cocoo",
+        email: "Coco3@coco.com",
         password: "test!1234"
       },
     })
@@ -38,7 +38,7 @@ describe('register test', () => {
     cy.get('input[formControlName="firstName"]').type('did') // Add username
     cy.get('input[formControlName="lastName"]').type('test') // Add username
     cy.get('input[formControlName="email"]').type('did@fakemail.fr') // Add email
-    cy.get('input[formControlName="password"]').type('toto') // Add password
+    cy.get('input[formControlName="password"]').type('coco') // Add password
     cy.get('button').click()
     cy.contains('An error occurred') // Add error message
   })

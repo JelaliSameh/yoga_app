@@ -64,9 +64,9 @@ describe('MeComponent', () => {
   // Test pour vérifier que la méthode delete() fonctionne correctement
   test('should delete user', () => {
     component.delete();
-    expect(userServiceMock.delete).toHaveBeenCalledWith('1');
-    expect(matSnackBarMock.open).toHaveBeenCalledWith('Your account has been deleted !', 'Close', { duration: 3000 });
-    expect(sessionServiceMock.logOut).toHaveBeenCalled();
-    expect(routerMock.navigate).toHaveBeenCalledWith(['/']);
+    expect(userServiceMock.delete).toHaveBeenCalledWith('1');//Vérifie que delete() a été appelé avec l’ID 1.
+    expect(matSnackBarMock.open).toHaveBeenCalledWith('Your account has been deleted !', 'Close', { duration: 3000 });//Vérifie que la notification a bien été affichée.
+    expect(sessionServiceMock.logOut).toHaveBeenCalled();//Vérifie que l’utilisateur a été déconnecté.
+    expect(routerMock.navigate).toHaveBeenCalledWith(['/']);//Vérifie que l’utilisateur a été redirigé à la page d’accueil.
   });
 });

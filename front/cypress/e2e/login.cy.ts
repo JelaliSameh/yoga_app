@@ -16,13 +16,13 @@ describe('Login tests', () => {
       cy.intercept('GET', '/api/session', {
         body:[ {
           id: 2,
-          name: "Did admin",
-          date: "2024-04-06T00:00:00.000+00:00",
+          name: "Sam admin",
+          date: "2025-04-06T00:00:00.000+00:00",
           teacher_id: 2,
           description: "session yoga v2 v3",
           users: [2],
-          createdAt: "2024-04-05T15:25:49",
-          updatedAt: "2024-04-10T14:52:03"
+          createdAt: "2025-04-05T15:25:49",
+          updatedAt: "2025-04-10T14:52:03"
         }],
         }).as('session')
 
