@@ -3,6 +3,8 @@ package com.openclassrooms.starterjwt.security.jwt;
 
 // Importations nécessaires
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,8 +16,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.Date;
 
-// Annotation pour indiquer qu'il s'agit d'un test Spring Boot
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 public class JwtUtilsTest {
 
     // Injection des utilitaires JWT

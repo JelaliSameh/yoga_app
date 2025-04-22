@@ -3,10 +3,12 @@ package com.openclassrooms.starterjwt.security.jwt.integration;
 
 // Importations nécessaires
 import org.junit.jupiter.api.BeforeEach;
+
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.mock.web.MockFilterChain;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
@@ -21,8 +23,7 @@ import com.openclassrooms.starterjwt.security.jwt.JwtUtils;
 import com.openclassrooms.starterjwt.security.services.UserDetailsServiceImpl;
 import static org.junit.jupiter.api.Assertions.*;
 
-// Annotations pour indiquer qu'il s'agit d'un test Spring Boot avec configuration automatique de MockMvc
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 @AutoConfigureMockMvc
 public class AuthTokenFilterIntegrationTest {
 

@@ -1,11 +1,14 @@
 package com.openclassrooms.starterjwt.controllers;
 import static org.junit.jupiter.api.Assertions.*;
+
 import static org.mockito.Mockito.when;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.mockito.junit.jupiter.MockitoExtension;
+
 import org.springframework.http.ResponseEntity;
 
 import com.openclassrooms.starterjwt.dto.TeacherDto;
@@ -16,7 +19,7 @@ import com.openclassrooms.starterjwt.services.TeacherService;
 import java.util.Arrays;
 import java.util.List;
 
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 public class TeacherControllerTest {
 
     @InjectMocks

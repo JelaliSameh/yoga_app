@@ -62,7 +62,7 @@ describe('MeComponent', () => {
   });
 
   // Test pour vérifier que la méthode delete() fonctionne correctement
-  test('should delete user', () => {
+  test('should delete user', () =>      {
     component.delete();
     expect(userServiceMock.delete).toHaveBeenCalledWith('1');//Vérifie que delete() a été appelé avec l’ID 1.
     expect(matSnackBarMock.open).toHaveBeenCalledWith('Your account has been deleted !', 'Close', { duration: 3000 });//Vérifie que la notification a bien été affichée.

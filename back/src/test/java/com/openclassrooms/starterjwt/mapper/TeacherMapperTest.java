@@ -3,16 +3,16 @@ package com.openclassrooms.starterjwt.mapper;
 
 // Importations nécessaires
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import com.openclassrooms.starterjwt.dto.TeacherDto;
 import com.openclassrooms.starterjwt.models.Teacher;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.Arrays;
 import java.util.List;
 
-// Annotation pour indiquer qu'il s'agit d'un test Spring Boot
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 public class TeacherMapperTest {
 
     // Injection du mapper de professeur

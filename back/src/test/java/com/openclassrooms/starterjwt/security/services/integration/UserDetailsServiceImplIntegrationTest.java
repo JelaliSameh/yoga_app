@@ -3,9 +3,11 @@ package com.openclassrooms.starterjwt.security.services.integration;
 
 // Importations nécessaires
 import org.junit.jupiter.api.BeforeEach;
+
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -16,8 +18,7 @@ import com.openclassrooms.starterjwt.security.services.UserDetailsImpl;
 import com.openclassrooms.starterjwt.security.services.UserDetailsServiceImpl;
 import static org.junit.jupiter.api.Assertions.*;
 
-// Annotations pour indiquer qu'il s'agit d'un test Spring Boot
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 public class UserDetailsServiceImplIntegrationTest {
 
     // Injection des dépendances nécessaires

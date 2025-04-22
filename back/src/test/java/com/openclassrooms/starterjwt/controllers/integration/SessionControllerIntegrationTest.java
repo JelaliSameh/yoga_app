@@ -3,6 +3,7 @@ package com.openclassrooms.starterjwt.controllers.integration;
 
 // Importations nécessaires
 import com.fasterxml.jackson.core.JsonProcessingException;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.openclassrooms.starterjwt.models.Session;
 import com.openclassrooms.starterjwt.models.User;
@@ -11,9 +12,10 @@ import com.openclassrooms.starterjwt.repository.UserRepository;
 import com.openclassrooms.starterjwt.services.SessionService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.web.servlet.MockMvc;
@@ -29,8 +31,7 @@ import java.util.Date;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
-// Annotation pour indiquer qu'il s'agit d'un test Spring Boot
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 // Annotation pour configurer automatiquement le MockMvc
 @AutoConfigureMockMvc
 public class SessionControllerIntegrationTest {
