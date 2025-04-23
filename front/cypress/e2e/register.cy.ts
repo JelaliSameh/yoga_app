@@ -15,10 +15,10 @@ describe('register test', () => {
       },
     })
 
-    cy.get('input[formControlName="firstName"]').type('did') // Add username
+    cy.get('input[formControlName="firstName"]').type('sam') // Add username
     cy.get('input[formControlName="lastName"]').type('test') // Add username
-    cy.get('input[formControlName="email"]').type('did@fakemail.fr') // Add email
-    cy.get('input[formControlName="password"]').type('toto') // Add password
+    cy.get('input[formControlName="email"]').type('sam@fakemail.fr') // Add email
+    cy.get('input[formControlName="password"]').type('Coco') // Add password
     cy.get('button').click()
     cy.url().should('include', '/login')
   })
@@ -35,9 +35,9 @@ describe('register test', () => {
       },
     })
 
-    cy.get('input[formControlName="firstName"]').type('did') // Add username
+    cy.get('input[formControlName="firstName"]').type('sam') // Add username
     cy.get('input[formControlName="lastName"]').type('test') // Add username
-    cy.get('input[formControlName="email"]').type('did@fakemail.fr') // Add email
+    cy.get('input[formControlName="email"]').type('sam@fakemail.fr') // Add email
     cy.get('input[formControlName="password"]').type('coco') // Add password
     cy.get('button').click()
     cy.contains('An error occurred') // Add error message

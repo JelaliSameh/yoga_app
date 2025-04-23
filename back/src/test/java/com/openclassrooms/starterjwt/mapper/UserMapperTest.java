@@ -3,6 +3,7 @@ package com.openclassrooms.starterjwt.mapper;
 
 // Importations nécessaires
 import org.junit.jupiter.api.Test;
+
 import java.util.List;
 import java.util.Arrays;
 import com.openclassrooms.starterjwt.dto.UserDto;

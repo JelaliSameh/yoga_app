@@ -3,6 +3,7 @@ package com.openclassrooms.starterjwt.security.services;
 
 // Importations nécessaires
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import java.util.Collection;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
